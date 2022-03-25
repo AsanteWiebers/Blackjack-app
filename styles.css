@@ -18,6 +18,7 @@
 
 body {
     line-height: 1.6;
+    text-align: center;
 }
 
 h1 {
@@ -34,12 +35,16 @@ h1 {
 p {
     display: flex;
     justify-content: center;
-    top: 5em;
+    top: 7em;
     position: relative;
     z-index: 2;
     font-family: var(--body-font);
     font-size: 2rem;
     font-weight: 600;
+}
+
+span {
+    text-decoration: underline;
 }
 
 .bg-image {
@@ -50,4 +55,18 @@ p {
     filter: blur(2px);
     height: 100vh;
     width: 100%;
+}
+
+button {
+    color: #ECECEC;
+    background: #FF1818;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1em 2em;
+    margin: 1em auto 1em;
+    height: 45px;
+    width: 150px;
 }
