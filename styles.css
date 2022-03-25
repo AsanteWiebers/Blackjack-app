@@ -1,29 +1,53 @@
+:root {
+    --head-font:  'Dela Gothic One', cursive;
+    --body-font:  'Prompt', sans-serif;
+
+    --yellow: #FFC300;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
 body {
-    background: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
+    line-height: 1.6;
 }
 
-img {
-    width: 200px;
-    display: block;
+h1 {
+    font-family: var(--head-font);
+    color: var(--yellow);
+    justify-content: center;
+    top: 3em;
+    font-size: 3rem;
+    position: relative;
+    display: flex;
+    z-index: 2;
 }
+
 p {
+    display: flex;
+    justify-content: center;
+    top: 5em;
+    position: relative;
+    z-index: 2;
+    font-family: var(--body-font);
+    font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 5px;
-}
-button {
-    background: white;
-    color: black;
-    margin-top: 10px;
-    border: 1px solid black;
-    padding: 10px 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 20px;
 }
 
-#error {
-    color: red;
-    font-weight: 200;
+.bg-image {
+    background-image: url(/assets/kaysha-V3qzwMY2ak0-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    filter: blur(2px);
+    height: 100vh;
+    width: 100%;
 }
