@@ -70,3 +70,9 @@ button {
     height: 45px;
     width: 150px;
 }
+
+button:hover {
+    background: rebeccapurple;
+    transition: 800ms;
+    cursor: pointer;
+}
