@@ -1,15 +1,12 @@
 let firstCard = 8;
 let secondCard = 9;
+let sum = firstCard + secondCard;
 let blackjack = false;
 let isAlive = true;
-let message = " ";
-
+let message = " "; 
 let messageEl = document.getElementById("welcome-elem");
 let sumEl = document.getElementById("sum-elem");
-
-let sum = firstCard + secondCard;
-
-
+let cardsEl = document.getElementById("cards-elem");
 
 function startGame() {
     
@@ -24,14 +21,17 @@ function startGame() {
     }
     messageEl.textContent = message;
     sumEl.textContent = "Sum: " + sum;
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard; 
+}
+
+function newCard () {
+
+    console.log("Drawing a new card from the deck!");
+    let card = 2;
+
+    sum += card;
+    startGame();
 }
 
 
-
-startGame();
-
-
-// console.log(message);
-// console.log(blackjack);
-// console.log(isAlive);
 
