@@ -1,5 +1,5 @@
-let firstCard = 8;
-let secondCard = 9;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard ];
 let sum = firstCard + secondCard;
 let blackjack = false;
@@ -9,7 +9,12 @@ let messageEl = document.getElementById("welcome-elem");
 let sumEl = document.getElementById("sum-elem");
 let cardsEl = document.getElementById("cards-elem");
 
-
+function getRandomCard(){
+   let randomNumber = Math.floor(Math.random () * 14) + 1;
+   return randomNumber;
+  
+}
+    console.log( getRandomCard()); 
 function startGame() {
     renderGame();
 }
@@ -18,8 +23,6 @@ function renderGame() {
 
     cardsEl.textContent = "Cards: "
     
-   
-
     for ( let i = 0; i < cards.length; i++){
 
         cardsEl.textContent += cards[i] + " ";
@@ -34,7 +37,7 @@ function renderGame() {
         blackjack = true;
     } else {
         message = "You're out of the game!";
-        isAlive = false;
+        isAlive = false;    
     }
 
     messageEl.textContent = message;
@@ -43,7 +46,7 @@ function renderGame() {
 
 function newCard () {
 
-    let card = 1;
+    let card = getRandomCard();
     sum += card;
 
     console.log(cards);
@@ -51,3 +54,9 @@ function newCard () {
     renderGame();
 }
 
+
+
+    
+
+
+ 
