@@ -1,4 +1,3 @@
-
 let cards = [];
 let sum = 0;
 let blackjack = false;
@@ -23,16 +22,14 @@ function getRandomCard(){
 }
 
 console.log( getRandomCard());
-console.log(cards);
-    
+
 function startGame() {
 
-    firstCard = getRandomCard();
-    secondCard = getRandomCard();
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
 
     cards = [firstCard, secondCard];
     sum = firstCard + secondCard;
-
 
     isAlive = true;
 
@@ -66,17 +63,16 @@ function renderGame() {
 
 function newCard () {
 
-    let card = getRandomCard();
-    sum += card;
+     if (isAlive === true && blackjack === false ){
+        let card = getRandomCard();
+        sum += card;
+        cards.push(card);
+        renderGame();
+    }
 
-    console.log(cards);
-    cards.push(card);
-    renderGame();
+    
 }
 
 
 
-    
 
-
- 
