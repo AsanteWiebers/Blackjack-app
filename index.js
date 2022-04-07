@@ -1,7 +1,6 @@
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard ];
-let sum = firstCard + secondCard;
+
+let cards = [];
+let sum = 0;
 let blackjack = false;
 let isAlive = true;
 let message = " "; 
@@ -12,7 +11,7 @@ let cardsEl = document.getElementById("cards-elem");
 function getRandomCard(){
 
     let randomNumber = Math.floor(Math.random() * 13) + 1;
-    
+
     if (randomNumber > 10){
         return 11;
     } else if (randomNumber === 1){
@@ -22,10 +21,21 @@ function getRandomCard(){
     }
 
 }
-console.log( getRandomCard());
 
+console.log( getRandomCard());
+console.log(cards);
     
 function startGame() {
+
+    firstCard = getRandomCard();
+    secondCard = getRandomCard();
+
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+
+
+    isAlive = true;
+
     renderGame();
 }
 
