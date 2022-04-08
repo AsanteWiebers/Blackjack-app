@@ -35,7 +35,7 @@ h1 {
 p {
     display: flex;
     justify-content: center;
-    top: 7em;
+    top: 9em;
     position: relative;
     z-index: 2;
     font-family: var(--body-font);

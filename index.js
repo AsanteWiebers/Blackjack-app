@@ -1,3 +1,8 @@
+
+let player = {
+    name: "Asante",
+    chips : 198
+}
 let cards = [];
 let sum = 0;
 let blackjack = false;
@@ -6,6 +11,9 @@ let message = " ";
 let messageEl = document.getElementById("welcome-elem");
 let sumEl = document.getElementById("sum-elem");
 let cardsEl = document.getElementById("cards-elem");
+let playerEl = document.getElementById("player-elem");
+
+playerEl.textContent = player.name + " ,You have " + player.chips + " chips left" ;
 
 function getRandomCard(){
 
@@ -72,7 +80,5 @@ function newCard () {
 
     
 }
-
-
 
 
